@@ -5,6 +5,8 @@
   --grey: hsl(228, 12%, 48%);
   --cream: hsl(30, 38%, 92%);
   --white: hsl(0, 0%, 100%);
+  --fraunces-family: Fraunces, sans-serif;
+  --montserrat-family: Montserrat, sans-serif;
 }
 
 *,
@@ -36,40 +38,40 @@ html {
 body {
   height: 100dvh;
   font-size: 1.6rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 main {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .card {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--montserrat-family);
   line-height: 1.2;
 }
 
-.product-category {
+.product-title p {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   font-size: 1.2rem;
   color: var(--grey);
 }
 
-.product-title {
-  font-family: "Fraunces", sans-serif;
+.product-title h1 {
+  font-family: var(--fraunces-family);
   font-weight: bold;
   font-size: 3.2rem;
   color: var(--black);
+  margin-top: 2.4rem;
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 2.4rem;
   padding: 3.2rem;
 }
 
@@ -77,6 +79,26 @@ main {
   font-size: 1.4rem;
   line-height: 1.6;
   color: var(--grey);
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.product-price s {
+  line-height: 1.2;
+  font-size: 1.3rem;
+  color: var(--grey);
+  text-decoration: line-through;
+}
+
+.product-price data {
+  font-family: var(--fraunces-family);
+  color: var(--green-500);
+  line-height: 1;
+  font-size: 3.2rem;
+  font-weight: 700;
 }
 
 .attribution {
