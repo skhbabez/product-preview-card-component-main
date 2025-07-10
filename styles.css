@@ -102,11 +102,18 @@ main {
 }
 
 .cart-button {
-  background-image: url("./images/icon-cart.svg");
-  background-position: 0.5rem;
-  background-repeat: no-repeat;
-  background-size: 1.5rem;
-  padding-inline-start: 2rem;
+  font-size: 1.4rem;
+  color: var(--white);
+  background-color: var(--green-500);
+  padding-inline: 3.2rem;
+  padding-block: 1.6rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  text-align: center;
+}
+.cart-button img {
+  margin-inline-end: 1.7rem;
 }
 
 .attribution {
