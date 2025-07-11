@@ -17,16 +17,17 @@
   <body>
     <main>
       <article class="card">
-        <img
-          class="product-picture"
-          src="./images/image-product-mobile.jpg"
-          alt="Square, flat bottle of Gabrielle Chanel perfume with a golden cap and light amber liquid."
-          srcset="
-            ./images/image-product-mobile.jpg  350w,
-            ./images/image-product-desktop.jpg 300w
-          "
-          sizes="(min-width: 768px) 300px, 350px"
-        />
+        <picture class="product-picture">
+          <source
+            srcset="./images/image-product-desktop.jpg"
+            media="(min-width:768px)"
+          />
+          <img
+            src="./images/image-product-mobile.jpg"
+            alt="Square, flat bottle of Gabrielle Chanel perfume with a golden cap and light amber liquid."
+            width="350"
+          />
+        </picture>
 
         <div class="card-content">
           <hgroup class="product-title">

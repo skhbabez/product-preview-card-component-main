@@ -58,9 +58,10 @@ main {
   overflow: hidden;
 }
 
-.product-picture {
+.product-picture img {
   object-fit: cover;
   width: 350px;
+  display: block;
 }
 
 .product-title p {
@@ -138,4 +139,20 @@ main {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: auto;
+    display: flex;
+  }
+
+  .card-content {
+    width: 300px;
+  }
+
+  .product-picture img {
+    width: 300px;
+    height: 100%;
+  }
 }
