@@ -123,6 +123,11 @@ main {
   text-align: center;
   min-width: 100%;
 }
+
+.cart-button:hover {
+  background-color: var(--green-700);
+}
+
 .cart-button img {
   margin-inline-end: 1.7rem;
 }
