@@ -40,6 +40,7 @@ body {
   font-size: 1.6rem;
   display: grid;
   grid-template-rows: 1fr auto;
+  background-color: var(--cream);
 }
 
 main {
@@ -51,6 +52,15 @@ main {
 .card {
   font-family: var(--montserrat-family);
   line-height: 1.2;
+  width: min-content;
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-picture {
+  object-fit: cover;
+  width: 350px;
 }
 
 .product-title p {
@@ -111,6 +121,7 @@ main {
   border: none;
   font-weight: 700;
   text-align: center;
+  min-width: 100%;
 }
 .cart-button img {
   margin-inline-end: 1.7rem;
