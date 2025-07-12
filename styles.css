@@ -52,16 +52,24 @@ main {
 .card {
   font-family: var(--montserrat-family);
   line-height: 1.2;
-  width: min-content;
+  max-width: 350px;
+  width: 100%;
   background-color: var(--white);
   border-radius: 8px;
   overflow: hidden;
 }
 
+.product-picture {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
 .product-picture img {
-  object-fit: cover;
-  width: 350px;
+  width: 100%;
+  height: auto;
   display: block;
+  object-fit: cover;
 }
 
 .product-title p {
@@ -145,15 +153,12 @@ main {
 @media (min-width: 768px) {
   .card {
     width: auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 300px));
+    max-width: none;
   }
 
-  .card-content {
-    width: 300px;
-  }
-
-  .product-picture img {
-    width: 300px;
-    height: 100%;
+  .product-picture {
+    aspect-ratio: 2/3;
   }
 }
